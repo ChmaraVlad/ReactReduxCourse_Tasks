@@ -1,48 +1,32 @@
 // Core
 import React, { FC } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
-import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 // Components
 import { ErrorBoundary } from '../../components';
 
 // Styles
-import { Container, Nav, Breadcrumbs, Crumb } from './styles';
+import { Container, Nav } from './styles';
 
-// Icons
-import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const Main: FC = () => {
-    const { pathname } = useLocation();
+    const navigate = useNavigate();
+
+    const handleRedirect = <T, >(path: T) => {
+        navigate(path);
+    };
+
 
     return (
         <Container>
             <Nav>
-                <Link to = 'register'>Registation</Link>
-                <Link to = '/items'>Items</Link>
+                <button onClick = { () => handleRedirect<number>(-1) }>Back
+                </button>
+                <button onClick = { () => handleRedirect<string>('/') }>Home
+                </button>
+                <button onClick = { () => handleRedirect<string>('react') }>Menu
+                </button>
             </Nav>
-            <Breadcrumbs>
-                <Crumb to = '/'>
-                    <FontAwesomeIcon
-                        icon = { faHome }
-                        size = '2x'
-                    />
-                </Crumb>
-                {pathname.split('/').map((crumb, i) => {
-                    const path = pathname.split('/').slice(0, i + 1)
-                        .join('/');
-
-                    return (
-                        crumb && (
-                            <Crumb
-                                key = { path }
-                                to = { path }>
-                                {crumb}
-                            </Crumb>
-                        )
-                    );
-                })}
-            </Breadcrumbs>
             <Outlet />
         </Container>
     );
