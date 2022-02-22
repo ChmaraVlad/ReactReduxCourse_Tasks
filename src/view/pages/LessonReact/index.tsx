@@ -7,6 +7,7 @@ import { Outlet } from 'react-router';
 
 // Components
 import { ErrorBoundary } from '../../components';
+import { Navigation } from '../../components/Navigation';
 
 // Styles
 import * as S from './styles';
@@ -54,7 +55,7 @@ const lessons = [
 const LessonReact: FC<PropTypes> = () => {
     return (
         <S.Container>
-
+            <Navigation />
             <h1>Lessons</h1>
             <S.NavigationWrapper>
                 {

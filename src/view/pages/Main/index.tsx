@@ -1,32 +1,20 @@
 // Core
 import React, { FC } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 // Components
 import { ErrorBoundary } from '../../components';
+import { Navigation } from '../../components/Navigation';
 
 // Styles
-import { Container, Nav } from './styles';
+import { Container } from './styles';
 
 
 const Main: FC = () => {
-    const navigate = useNavigate();
-
-    const handleRedirect = <T, >(path: T) => {
-        navigate(path);
-    };
-
-
     return (
         <Container>
-            <Nav>
-                <button onClick = { () => handleRedirect<number>(-1) }>Back
-                </button>
-                <button onClick = { () => handleRedirect<string>('/') }>Home
-                </button>
-                <button onClick = { () => handleRedirect<string>('react') }>Menu
-                </button>
-            </Nav>
+            <Navigation />
+            <h1>Welcom to home Page</h1>
             <Outlet />
         </Container>
     );
