@@ -21,7 +21,8 @@ export const ReactLesson4: FC<PropTypes> = () => {
                 <h1>Домашнее задание No1</h1>
                 <p>
                     В этом задании необходимо создать компонет Contacts внутри директории components с
-                    содержимым <p>My email: contact@gmail.com</p>
+                    содержимым <br />
+                    My email: contact@gmail.com
                 </p>
                 <p>
                     Затем необходимо создать компонент Contacts внутри директории pages , данный
