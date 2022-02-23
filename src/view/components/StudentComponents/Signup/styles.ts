@@ -11,7 +11,8 @@ nav{
     font-size: 24px;
     button{
         width: 100px;
-        padding: 5px 10px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
         &:hover{
             background-color: grey;
         }
