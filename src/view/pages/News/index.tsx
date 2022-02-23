@@ -1,14 +1,14 @@
 // Core
 import React, { FC } from 'react';
-import { useApiLoader } from '../../../../tools/hooks/useApiLoader';
+import { useApiLoader } from '../../../tools/hooks/useApiLoader';
 
 // Bus
 // import {} from '../../../bus/'
 
 // Components
-import { ErrorBoundary } from '../../../components';
-import { Article } from '../../../components/Article';
-import { Spinner } from '../../../elements';
+import { ErrorBoundary } from '../../components';
+import { Article } from '../../components/Article';
+import { Spinner } from '../../elements';
 
 // Styles
 import * as S from './styles';

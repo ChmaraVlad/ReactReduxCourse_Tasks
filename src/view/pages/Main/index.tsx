@@ -14,13 +14,6 @@ import { Container } from './styles';
 
 
 const Main: FC = () => {
-    const { films, fetchFilm } = useFilms();
-    console.log('🚀 ~ file: index.tsx ~ line 18 ~ films', films);
-
-    useEffect(() => {
-        fetchFilm('2');
-    }, []);
-
     return (
         <Container>
             <Navigation />

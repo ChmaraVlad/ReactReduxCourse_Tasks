@@ -1,12 +1,12 @@
 // Core
 import React, { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Bus
 // import {} from '../../../bus/'
 
 // Components
-import { ErrorBoundary } from '../../../components';
-import { StudentRegistrationComponent } from '../../../ReactPractice/StudentRegistrationComponent';
+import { ErrorBoundary } from '../../components';
 
 // Styles
 import * as S from './styles';
@@ -17,11 +17,20 @@ type PropTypes = {
 }
 
 const StudentRegistration: FC<PropTypes> = () => {
+    const navigate = useNavigate();
+
+    const handleRedirect = <T, >(path: T) => {
+        navigate(path);
+    };
+
     return (
         <S.Container>
             <h1>
-                Student Registration Page
+                Task 5
             </h1>
+            <button onClick = { () => handleRedirect<string>('/registration') }>
+                Registration Form
+            </button>
             <S.Articles>
                 <h2>Домашнее задание No1</h2>
                 <p>
@@ -92,7 +101,6 @@ const StudentRegistration: FC<PropTypes> = () => {
                     <li>Валидацию из предыдущего урока нужно удалить</li>
                 </S.List>
             </S.Articles>
-            <StudentRegistrationComponent />
         </S.Container>
     );
 };

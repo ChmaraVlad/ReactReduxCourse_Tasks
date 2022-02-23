@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+    padding: 20px;
   display: flex;
     justify-content: space-evenly;
     max-width: 250px;

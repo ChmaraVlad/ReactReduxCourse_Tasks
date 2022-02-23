@@ -52,7 +52,7 @@ const lessons = [
     },
 ];
 
-const LessonReact: FC<PropTypes> = () => {
+const ListLessonsReact: FC<PropTypes> = () => {
     return (
         <S.Container>
             <Navigation />
@@ -77,6 +77,6 @@ const LessonReact: FC<PropTypes> = () => {
 
 export default () => (
     <ErrorBoundary>
-        <LessonReact />
+        <ListLessonsReact />
     </ErrorBoundary>
 );

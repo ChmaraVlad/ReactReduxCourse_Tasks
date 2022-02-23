@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { book } from './book';
 
-const Links = [ book.root, book.news, book.user, book.student, book.registration, book.theme, book.people, book.person, book.film, book.films ];
+const Links = [ book.student, book.registration, book.people, book.films ];
 
 const NavElement: FC<{link: string}> = ({ link }) => {
     const navigate = useNavigate();
@@ -12,11 +12,11 @@ const NavElement: FC<{link: string}> = ({ link }) => {
     };
 
     return (
-        <line>
+        <li>
             <button onClick = { () => handleRedirect<string>(link) }>
                 {link}
             </button>
-        </line>
+        </li>
     );
 };
 

@@ -1,7 +1,11 @@
 // Core
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../../init';
+import { useSelector } from '../../../../tools/hooks';
+import { Navigation } from '../../Navigation';
+
+
+// Styles
+import * as S from './styles';
 
 
 // Types
@@ -15,12 +19,12 @@ export type Student = {
 }
 
 export const ProfileComponent = () => {
-    const { results } = useSelector((state: RootState) => state.student);
+    const { results } = useSelector((state) => state.student);
 
     const jsxStudents = results.map((student: Student, index: number) => {
         return (
             <article key = { index }>
-                <h2>Profile №{index + 1}</h2>
+                <li>Profile №{index + 1}</li>
                 <ul>
                     <li>
                         First Name: {student.firstName}
@@ -46,15 +50,15 @@ export const ProfileComponent = () => {
     });
 
     return (
-        <>
-            <h1>
-                Profiles
-            </h1>
-            {
-                results.length
-                    ? jsxStudents
-                    : <h2> Our dataBase are Empty </h2>
-            }
-        </>
+        <S.Container>
+            <Navigation />
+            <S.Wrapper>
+                {
+                    results.length
+                        ? jsxStudents
+                        : <h1> Our dataBase are Empty </h1>
+                }
+            </S.Wrapper>
+        </S.Container>
     );
 };

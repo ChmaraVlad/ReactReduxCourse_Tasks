@@ -33,7 +33,6 @@ export const StudentRegistrationComponent = () => {
 
     return (
         <S.Container>
-            <h1>Student Registration Form</h1>
             <S.Form onSubmit = { handleSubmit(onSubmit) }>
                 <div>
                     <label htmlFor = 'firstName'>First Name
