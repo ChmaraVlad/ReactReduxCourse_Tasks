@@ -41,32 +41,43 @@ export const PeopleComponent: FC<PropTypes> = () => {
         } = person;
 
         return (
-            <ul key = { index }>
-                <div
-                    onClick = { () => handleRedirect<string>(`${index + 1}`) }>
-                    Name: {name}
+            <ul
+                className = 'wrapper'
+                key = { index }>
+                <div className = 'image'>
+                    <img
+                        alt = 'avatar'
+                        src = 'https://via.placeholder.com/150'
+                    />
                 </div>
-                <li>
-                    Birthday: {birth_year}
-                </li>
-                <li>
-                    Gender: {gender}
-                </li>
-                <li>
-                    Height: {height}
-                </li>
-                <li>
-                    Mass: {mass}
-                </li>
-                <li>
-                    Hair Color: {hair_color}
-                </li>
-                <li>
-                    Skin Color: {skin_color}
-                </li>
-                <li>
-                    Eye Color: {eye_color}
-                </li>
+                <div className = 'content'>
+                    <div
+                        className = 'link'
+                        onClick = { () => handleRedirect<string>(`${index + 1}`) }>
+                        Name: {name}
+                    </div>
+                    <li>
+                        Birthday: {birth_year}
+                    </li>
+                    <li>
+                        Gender: {gender}
+                    </li>
+                    <li>
+                        Height: {height}
+                    </li>
+                    <li>
+                        Mass: {mass}
+                    </li>
+                    <li>
+                        Hair Color: {hair_color}
+                    </li>
+                    <li>
+                        Skin Color: {skin_color}
+                    </li>
+                    <li>
+                        Eye Color: {eye_color}
+                    </li>
+                </div>
             </ul>
         );
     });

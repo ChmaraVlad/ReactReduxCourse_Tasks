@@ -9,17 +9,22 @@ h1 {
     margin-bottom: 20px;
 }
 font-size: 18px;
-ul{
+
+/* -------- */
+.wrapper {
+    display: flex;
     margin-bottom: 30px;
-}
-ul {
-    min-width: 400px;
+    min-width: 500px;
     max-width: 40%;
-    li, div {
-        padding: 10px 20px;
-        margin-bottom: 10px;
+    .image {
+        margin-right: 30px;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
-    div {
+    .link {
         display: inline-block;
         font-size: 25px;
         cursor: pointer;
@@ -27,8 +32,13 @@ ul {
             text-decoration: underline;
         }
     }
+    .content {
+        padding: 10px 0;
+        flex: 1 1 auto;
+    }
     background-color: #a7d6fc;
     border-radius: 30px;
+    overflow: hidden;
 }
 `;
 

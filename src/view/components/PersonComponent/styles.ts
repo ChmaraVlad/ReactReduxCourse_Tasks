@@ -2,7 +2,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-text-align: center;
 h1 {
     font-weight: bold;
     font-size: 30px;
@@ -10,29 +9,42 @@ h1 {
     margin-bottom: 20px;
 }
 font-size: 18px;
-ul{
+
+/* -------- */
+.wrapper {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 30px;
-}
-ul {
-    min-width: 400px;
+    min-width: 500px;
     max-width: 40%;
-    li, div {
-        padding: 10px 20px;
-        margin-bottom: 10px;
+    .image {
+        img {
+            width: 100%;
+            max-height: 100%;
+        }
     }
-    div {
+    .link {
         display: inline-block;
         font-size: 25px;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .content {
+        padding: 10px 0;
+        flex: 1 1 auto;
+        text-align: center;
     }
     background-color: #a7d6fc;
     border-radius: 30px;
+    overflow: hidden;
 }
 `;
 
-
 export const Wrapper = styled.article`
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content: space-evenly;
 flex-wrap: wrap;
 `;
+

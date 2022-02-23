@@ -34,22 +34,33 @@ export const FilmComponent: FC<PropTypes> = () => {
         } = film;
 
         return (
-            <ul key = { index }>
-                <div>
-                    Title: {title}
+            <ul
+                className = 'wrapper'
+                key = { index }>
+                <div className = 'image'>
+                    <img
+                        alt = 'avatar'
+                        src = 'https://via.placeholder.com/300'
+                    />
                 </div>
-                <li>
-                    Release Date: {release_date}
-                </li>
-                <li>
-                    Opening Crawl: {opening_crawl}
-                </li>
-                <li>
-                    Director: {director}
-                </li>
-                <li>
-                    Producer: {producer}
-                </li>
+                <div className = 'content'>
+                    <div
+                        className = 'link'>
+                        Title: {title}
+                    </div>
+                    <li>
+                        Release Date: {release_date}
+                    </li>
+                    <li>
+                        Opening Crawl: {opening_crawl}
+                    </li>
+                    <li>
+                        Director: {director}
+                    </li>
+                    <li>
+                        Producer: {producer}
+                    </li>
+                </div>
             </ul>
         );
     });

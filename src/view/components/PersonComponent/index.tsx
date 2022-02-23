@@ -37,31 +37,42 @@ export const PersonComponent: FC<PropTypes> = () => {
         } = person;
 
         return (
-            <ul key = { index }>
-                <div>
-                    Name: {name}
+            <ul
+                className = 'wrapper'
+                key = { index }>
+                <div className = 'image'>
+                    <img
+                        alt = 'avatar'
+                        src = 'https://via.placeholder.com/200'
+                    />
                 </div>
-                <li>
-                    Birthday: {birth_year}
-                </li>
-                <li>
-                    Gender: {gender}
-                </li>
-                <li>
-                    Height: {height}
-                </li>
-                <li>
-                    Mass: {mass}
-                </li>
-                <li>
-                    Hair Color: {hair_color}
-                </li>
-                <li>
-                    Skin Color: {skin_color}
-                </li>
-                <li>
-                    Eye Color: {eye_color}
-                </li>
+                <div className = 'content'>
+                    <div
+                        className = 'link'>
+                        Name: {name}
+                    </div>
+                    <li>
+                        Birthday: {birth_year}
+                    </li>
+                    <li>
+                        Gender: {gender}
+                    </li>
+                    <li>
+                        Height: {height}
+                    </li>
+                    <li>
+                        Mass: {mass}
+                    </li>
+                    <li>
+                        Hair Color: {hair_color}
+                    </li>
+                    <li>
+                        Skin Color: {skin_color}
+                    </li>
+                    <li>
+                        Eye Color: {eye_color}
+                    </li>
+                </div>
             </ul>
         );
     });
