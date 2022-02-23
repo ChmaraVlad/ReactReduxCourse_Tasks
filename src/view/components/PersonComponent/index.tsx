@@ -79,7 +79,6 @@ export const PersonComponent: FC<PropTypes> = () => {
 
     return (
         <S.Container>
-            Component: PersonComponent
             <S.Wrapper>
                 {personJsx}
             </S.Wrapper>

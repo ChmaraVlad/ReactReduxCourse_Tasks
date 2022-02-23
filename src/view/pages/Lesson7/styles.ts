@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+padding: 0 10px;
 `;
 export const Articles = styled.article`
 margin-bottom: 30px;
@@ -13,13 +14,20 @@ h2 {
 p {
     margin: 0 0 10px 0;
 }
+button {
+    padding: 7px 14px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover{
+        background-color: grey;
+    }
+}
 `;
+
 export const List = styled.ul`
 li {
-    padding-left: 15px;
+    padding-left: 20px;
+    list-style-type: disc;
 }
-
-`;
-
-export const content = styled.div`
 `;
