@@ -1,5 +1,5 @@
 // Core
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 
 // Tools
@@ -19,7 +19,7 @@ export const toggrersSlice = createSlice({
     name:     'togglers',
     initialState,
     reducers: {
-        togglerCreatorAction: (state, action: PayloadAction<Options>) => ({
+        togglerCreatorAction: (state, action) => ({
             ...state,
             [ action.payload.type ]: action.payload.value,
         }),

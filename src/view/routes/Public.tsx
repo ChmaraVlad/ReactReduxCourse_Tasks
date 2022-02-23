@@ -13,6 +13,9 @@ import StudentRegistration from '../pages/LessonReact/StudentRegistration';
 import { ReactLesson3 } from '../ReactPractice/ReactLesson3';
 import { ReactLesson4 } from '../ReactPractice/ReactLesson4';
 import NoMatch from '../pages/NoMatch';
+import { book } from './book';
+import { Signup } from '../components/StudentComponents/Signup';
+import { ProfileComponent } from '../components/StudentComponents/ProfileComponent';
 
 export const Public: FC = () => {
     return (
@@ -58,6 +61,14 @@ export const Public: FC = () => {
                         path = '8'
                     />
                 </Route>
+                <Route
+                    element = { <Signup /> }
+                    path = { book.registration }
+                />
+                <Route
+                    element = { <ProfileComponent /> }
+                    path = { book.student }
+                />
                 <Route
                     element = { <NoMatch /> }
                     path = '*'

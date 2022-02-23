@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { book } from './book';
 
 const Links = [ book.root, book.news, book.user, book.student, book.registration, book.theme, book.people, book.person, book.film, book.films ];
 
-export const LinksJsx = Links.map((link, index) => {
+const NavElement: FC<{link: string}> = ({ link }) => {
     const navigate = useNavigate();
 
     const handleRedirect = <T, >(path: T) => {
@@ -12,10 +12,17 @@ export const LinksJsx = Links.map((link, index) => {
     };
 
     return (
-        <li key = { index }>
+        <line>
             <button onClick = { () => handleRedirect<string>(link) }>
                 {link}
             </button>
-        </li>
+        </line>
     );
-});
+};
+
+export const LinksJsx = Links.map((link, index) => (
+    <NavElement
+        key = { index }
+        link = { link }
+    />
+));
