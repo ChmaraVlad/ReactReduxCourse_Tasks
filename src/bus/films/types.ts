@@ -18,8 +18,16 @@ export type Film = {
     edited: string,
     url: string
 }
-export type Films = Array<Film>
-export type FilmsState = Films | null
+
+export type ExtendedFilm = {
+    id: string;
+} & Film;
+
+export type Films = Array<ExtendedFilm>;
+export type FilmsState = {
+    data: Films | null;
+    isFetching: boolean;
+};
 
 // Contracts
 export type BaseContact<T = any> = CaseReducer<FilmsState, PayloadAction<T>>

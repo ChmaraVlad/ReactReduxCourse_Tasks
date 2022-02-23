@@ -1,14 +1,14 @@
 // Types
 import * as types from './types';
 
-export const setFilms: types.BaseContact<types.Films> = (__, action) => {
-    return action.payload;
+export const setFilms: types.BaseContact<types.Films> = (state, action) => {
+    state.data = action.payload;
 };
 
-export const setFilm: types.BaseContact<types.Film> = (state, action) => {
-    // if (state !== null) {
-    //     return [ ...state, action.payload ];
-    // }
+export const setFilm: types.BaseContact<types.ExtendedFilm> = (state, action) => {
+    state.data = [ action.payload ];
+};
 
-    return [ action.payload ];
+export const setFilmsFetchingStatus: types.BaseContact<boolean> = (state, action) => {
+    state.isFetching = action.payload;
 };

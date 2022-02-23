@@ -28,7 +28,7 @@ export const FilmsComponent: FC<PropTypes> = () => {
         navigate(path);
     };
 
-    const filmsJsx = films?.map((film, index) => {
+    const filmsJsx = films.data?.map((film, index) => {
         const {
             title,
             release_date,
