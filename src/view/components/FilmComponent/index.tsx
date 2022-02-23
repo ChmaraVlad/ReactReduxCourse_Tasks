@@ -18,7 +18,6 @@ type PropTypes = {
 export const FilmComponent: FC<PropTypes> = () => {
     const { id } = useParams();
     const { films, fetchFilm } = useFilms();
-    console.log('🚀 ~ file: index.tsx ~ line 18 ~ films', films);
 
     useEffect(() => {
         fetchFilm(`${id}`);

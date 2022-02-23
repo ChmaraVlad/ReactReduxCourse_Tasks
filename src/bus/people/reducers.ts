@@ -1,11 +1,10 @@
 // Types
 import * as types from './types';
 
-export const setFilms: types.BaseContact<types.Films> = (__, action) => {
+export const setPeople: types.BaseContact<types.People> = (__, action) => {
     return action.payload;
 };
-
-export const setFilm: types.BaseContact<types.Film> = (state, action) => {
+export const setPerson: types.BaseContact<types.Person> = (state, action) => {
     // if (state !== null) {
     //     return [ ...state, action.payload ];
     // }

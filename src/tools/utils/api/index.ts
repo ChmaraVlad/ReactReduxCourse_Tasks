@@ -17,8 +17,7 @@ export const api = Object.freeze({
         },
     },
     person: {
-        // --------- any
-        fetch: (id: any) => {
+        fetch: (id: string) => {
             return fetch(`${root}/people/${id}`, {
                 method: 'GET',
             });
@@ -33,8 +32,7 @@ export const api = Object.freeze({
         },
     },
     film: {
-        // ----------- ANY
-        fetch: (id: any) => {
+        fetch: (id: string) => {
             return fetch(`${root}/films/${id}`, {
                 method: 'GET',
             });

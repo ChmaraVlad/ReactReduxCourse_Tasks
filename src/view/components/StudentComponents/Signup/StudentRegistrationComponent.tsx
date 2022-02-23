@@ -28,7 +28,10 @@ export const StudentRegistrationComponent = () => {
         applyStudent,
     } = useStudent();
 
-    const onSubmit = (data: any) => applyStudent(data);
+    const onSubmit = (data: any) => {
+        applyStudent(data);
+        //  как сборосить форму
+    };
 
 
     return (

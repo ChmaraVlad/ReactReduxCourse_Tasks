@@ -18,7 +18,11 @@ import NoMatch from '../pages/NoMatch';
 import { book } from './book';
 import Film from '../pages/Film';
 import Films from '../pages/Films';
+import People from '../pages/People';
+import Person from '../pages/Person';
 import Lesson6 from '../pages/Lesson6';
+import Lesson7 from '../pages/Lesson7';
+import Lesson8 from '../pages/Lesson8';
 
 export const Public: FC = () => {
     return (
@@ -56,11 +60,11 @@ export const Public: FC = () => {
                         path = '6'
                     />
                     <Route
-                        element = { <ReactLesson3 /> }
+                        element = { <Lesson7 /> }
                         path = '7'
                     />
                     <Route
-                        element = { <ReactLesson3 /> }
+                        element = { <Lesson8 /> }
                         path = '8'
                     />
                 </Route>
@@ -73,11 +77,11 @@ export const Public: FC = () => {
                     path = { book.student }
                 />
                 <Route
-                    element = { <Films /> }
+                    element = { <People /> }
                     path = 'people'
                 />
                 <Route
-                    element = { <Films /> }
+                    element = { <Person /> }
                     path = 'people/:id'
                 />
                 <Route
