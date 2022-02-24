@@ -16,71 +16,55 @@ type PropTypes = {
 
 export const PersonComponent: FC<PropTypes> = () => {
     const { id } = useParams();
-    const { people, fetchPerson } = usePeople();
+    const { fetchPerson, currentPerson } = usePeople();
 
     useEffect(() => {
-        fetchPerson(`${id}`);
+        id && fetchPerson(id);
     }, []);
 
-
-    const personJsx = people?.map((person, index) => {
-        const {
-            name,
-            birth_year,
-            gender,
-            height,
-            mass,
-            hair_color,
-            skin_color,
-            eye_color,
-
-        } = person;
-
-        return (
-            <ul
-                className = 'wrapper'
-                key = { index }>
-                <div className = 'image'>
-                    <img
-                        alt = 'avatar'
-                        src = 'https://via.placeholder.com/200'
-                    />
-                </div>
-                <div className = 'content'>
-                    <div
-                        className = 'link'>
-                        Name: {name}
-                    </div>
-                    <li>
-                        Birthday: {birth_year}
-                    </li>
-                    <li>
-                        Gender: {gender}
-                    </li>
-                    <li>
-                        Height: {height}
-                    </li>
-                    <li>
-                        Mass: {mass}
-                    </li>
-                    <li>
-                        Hair Color: {hair_color}
-                    </li>
-                    <li>
-                        Skin Color: {skin_color}
-                    </li>
-                    <li>
-                        Eye Color: {eye_color}
-                    </li>
-                </div>
-            </ul>
-        );
-    });
+    if (currentPerson === void 0) {
+        return <div>Find Error</div>;
+    }
 
     return (
         <S.Container>
             <S.Wrapper>
-                {personJsx}
+                <ul
+                    className = 'wrapper'>
+                    <div className = 'image'>
+                        <img
+                            alt = 'avatar'
+                            src = 'https://via.placeholder.com/200'
+                        />
+                    </div>
+                    <div className = 'content'>
+                        <div
+                            className = 'link'>
+                            Name: {currentPerson.name}
+                        </div>
+                        <li>
+                            Birthday: {currentPerson.birth_year}
+                        </li>
+                        <li>
+                            Gender: {currentPerson.gender}
+                        </li>
+                        <li>
+                            Height: {currentPerson.height}
+                        </li>
+                        <li>
+                            Mass: {currentPerson.mass}
+                        </li>
+                        <li>
+                            Hair Color: {currentPerson.hair_color}
+                        </li>
+                        <li>
+                            Skin Color: {currentPerson.skin_color}
+                        </li>
+                        <li>
+                            Eye Color: {currentPerson.eye_color}
+                        </li>
+                    </div>
+                </ul>
             </S.Wrapper>
         </S.Container>
     );

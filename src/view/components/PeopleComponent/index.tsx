@@ -27,7 +27,7 @@ export const PeopleComponent: FC<PropTypes> = () => {
         navigate(path);
     };
 
-    const peopleJsx = people?.map((person, index) => {
+    const peopleJsx = people.data?.map((person, index) => {
         const {
             name,
             birth_year,

@@ -20,9 +20,16 @@ export type Person = {
     url: string
 }
 
+export type ExtendedPerson = {
+    id: string
+} & Person
+
 // State
-export type People = Array<Person>
-export type PeopleState = People | null
+export type People = Array<ExtendedPerson>
+export type PeopleState = {
+    data: People | null;
+    isFetching: boolean
+}
 
 // Contracts
 export type BaseContact<T = any> = CaseReducer<PeopleState, PayloadAction<T>>

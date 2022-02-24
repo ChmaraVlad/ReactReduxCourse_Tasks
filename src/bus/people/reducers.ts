@@ -1,13 +1,13 @@
 // Types
 import * as types from './types';
 
-export const setPeople: types.BaseContact<types.People> = (__, action) => {
-    return action.payload;
+export const setPeople: types.BaseContact<types.People> = (state, action) => {
+    state.data = action.payload;
 };
-export const setPerson: types.BaseContact<types.Person> = (state, action) => {
-    // if (state !== null) {
-    //     return [ ...state, action.payload ];
-    // }
+export const setPerson: types.BaseContact<types.ExtendedPerson> = (state, action) => {
+    state.data = [ action.payload ];
+};
 
-    return [ action.payload ];
+export const setPeopleFetchingStatus: types.BaseContact<boolean> = (state, action) => {
+    state.isFetching = action.payload;
 };
