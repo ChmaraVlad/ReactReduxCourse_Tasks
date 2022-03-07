@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`planets actions should change Films Fetching Status to false 1`] = `
+Object {
+  "payload": false,
+  "type": "films/setFilmsFetchingStatus",
+}
+`;
+
+exports[`planets actions should change Films Fetching Status to true 1`] = `
+Object {
+  "payload": true,
+  "type": "films/setFilmsFetchingStatus",
+}
+`;
+
+exports[`planets actions should fetch film 1`] = `
+Object {
+  "payload": Object {
+    "characters": Array [],
+    "created": "string",
+    "director": "string",
+    "edited": "string",
+    "episode_id": "5",
+    "id": "1",
+    "opening_crawl": "string",
+    "planets": Array [],
+    "producer": "string",
+    "release_date": "string",
+    "species": Array [],
+    "starships": Array [],
+    "title": "string",
+    "url": "string",
+    "vehicles": Array [],
+  },
+  "type": "films/setFilm",
+}
+`;
+
+exports[`planets actions should fetch films 1`] = `
+Object {
+  "payload": Array [
+    Object {
+      "characters": Array [],
+      "created": "string",
+      "director": "string",
+      "edited": "string",
+      "episode_id": "5",
+      "id": "1",
+      "opening_crawl": "string",
+      "planets": Array [],
+      "producer": "string",
+      "release_date": "string",
+      "species": Array [],
+      "starships": Array [],
+      "title": "string",
+      "url": "string",
+      "vehicles": Array [],
+    },
+  ],
+  "type": "films/setFilms",
+}
+`;

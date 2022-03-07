@@ -4,7 +4,7 @@ import { CaseReducer, PayloadAction } from '@reduxjs/toolkit';
 // State
 export type Film = {
     title: string,
-    episode_id: number,
+    episode_id: string,
     opening_crawl: string,
     director: string,
     producer: string,
