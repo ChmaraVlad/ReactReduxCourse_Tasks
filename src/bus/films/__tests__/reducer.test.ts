@@ -3,7 +3,7 @@
 import reducer from '../slice';
 
 // Actions
-import { filmsActions } from '../slice';
+import { filmsActions, initialState } from '../slice';
 
 const TestFilm = {
     id:            '1',
@@ -29,30 +29,17 @@ describe('films reducer', () => {
     test('should return initial state by default', () => {
         expect(reducer(void 0, {
             type: void 0,
-        })).toEqual({
-            data:       null,
-            isFetching: false,
-        });
+        })).toEqual(initialState);
         // почему не работает так?
-        // expect(reducer(void 0, {})).toEqual({
-        //     data:       null,
-        //     isFetching: false,
-        // });
+        // expect(reducer(void 0, {})).toEqual(initialState);
     });
 
-    test('should handle start fetching action', () => {
-        const initState = {
-            data:       null,
-            isFetching: false,
-        };
-
-        expect(reducer(initState, filmsActions.setFilmsFetchingStatus(true)))
-            .toMatchInlineSnapshot(`
-        Object {
-          "data": null,
-          "isFetching": true,
-        }
-      `);
+    test('should handle fetching status start', () => {
+        expect(reducer(void 0, filmsActions.setFilmsFetchingStatus(true)))
+            .toEqual({
+                data:       null,
+                isFetching: true,
+            });
     });
 
     test('should handle stop fetching action', () => {
@@ -61,12 +48,10 @@ describe('films reducer', () => {
             isFetching: true,
         };
         expect(reducer(prevState, filmsActions.setFilmsFetchingStatus(false)))
-            .toMatchInlineSnapshot(`
-        Object {
-          "data": null,
-          "isFetching": false,
-        }
-      `);
+            .toEqual({
+                data:       null,
+                isFetching: false,
+            });
     });
     //  ========== 1 variant setFilms - dont work
     // test('should handle fill action films', () => {

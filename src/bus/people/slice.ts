@@ -7,7 +7,7 @@ import * as types from './types';
 // Reducers
 import * as reducers from './reducers';
 
-const initialState = {
+export const initialState = {
     data:       null,
     isFetching: false,
 };

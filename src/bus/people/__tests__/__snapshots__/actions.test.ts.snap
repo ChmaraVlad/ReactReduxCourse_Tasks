@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`people actions should change people Fetching Status to false 1`] = `
+Object {
+  "payload": false,
+  "type": "people/setPeopleFetchingStatus",
+}
+`;
+
+exports[`people actions should change people Fetching Status to true 1`] = `
+Object {
+  "payload": true,
+  "type": "people/setPeopleFetchingStatus",
+}
+`;
+
+exports[`people actions should fetch people 1`] = `
+Object {
+  "payload": Array [
+    Object {
+      "birth_year": "string",
+      "created": "string",
+      "edited": "string",
+      "eye_color": "string",
+      "films": Array [],
+      "gender": "string",
+      "hair_color": "string",
+      "height": "string",
+      "homeworld": "string",
+      "id": "string",
+      "mass": "string",
+      "name": "string",
+      "skin_color": "string",
+      "species": Array [],
+      "starships": Array [],
+      "url": "string",
+      "vehicles": Array [],
+    },
+  ],
+  "type": "people/setPeople",
+}
+`;
+
+exports[`people actions should fetch person 1`] = `
+Object {
+  "payload": Object {
+    "birth_year": "string",
+    "created": "string",
+    "edited": "string",
+    "eye_color": "string",
+    "films": Array [],
+    "gender": "string",
+    "hair_color": "string",
+    "height": "string",
+    "homeworld": "string",
+    "id": "string",
+    "mass": "string",
+    "name": "string",
+    "skin_color": "string",
+    "species": Array [],
+    "starships": Array [],
+    "url": "string",
+    "vehicles": Array [],
+  },
+  "type": "people/setPerson",
+}
+`;
