@@ -10,12 +10,12 @@ import * as S from './styles';
 
 // Types
 export type Student = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    age: '',
-    speciality: '',
-    sex: '',
+    firstName: string,
+    lastName: string,
+    email: string,
+    age: string,
+    speciality: string,
+    sex: string,
 }
 
 export const ProfileComponent = () => {
