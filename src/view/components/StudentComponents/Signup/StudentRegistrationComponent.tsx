@@ -18,6 +18,7 @@ export const StudentRegistrationComponent = () => {
     const { register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm({
         mode:          'onChange',
         defaultValues: initialValues,
@@ -30,6 +31,7 @@ export const StudentRegistrationComponent = () => {
 
     const onSubmit = (data: any) => {
         applyStudent(data);
+        reset();
         //  как сборосить форму
     };
 
