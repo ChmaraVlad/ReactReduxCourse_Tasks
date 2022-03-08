@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`student actions should create student 1`] = `
+Object {
+  "payload": Object {
+    "age": "string",
+    "email": "string",
+    "firstName": "string",
+    "lastName": "string",
+    "sex": "string",
+    "speciality": "string",
+  },
+  "type": "[STUDENT] - CREATE_STUDENT",
+}
+`;

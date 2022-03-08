@@ -2,7 +2,7 @@ import { StudentState/* , StudentActionTypes */ } from './types';
 import * as Types  from './types';
 import { Reducer, AnyAction } from 'redux';
 
-const initialState: StudentState = {
+export const initialState: StudentState = {
     results: [],
 };
 
