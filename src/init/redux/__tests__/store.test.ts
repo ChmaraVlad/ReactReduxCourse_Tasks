@@ -2,6 +2,9 @@
  * @jest-environment jsdom
  */
 
+// Task 3
+// here test for basic Store
+
 // // // Core
 import { createStore, combineReducers } from 'redux';
 
