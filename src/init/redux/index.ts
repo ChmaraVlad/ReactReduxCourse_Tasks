@@ -2,7 +2,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 // Reducers
-// import togglers from '../../bus/client/togglers';
+import togglers from '../../bus/client/togglers';
 import { studentReducer as student } from '../../bus/student/reducer';
 import films from '../../bus/films/slice';
 import people from '../../bus/people/slice';
@@ -16,7 +16,7 @@ import { rootSaga } from './rootSaga';
 
 export const store = configureStore({
     reducer: {
-        // togglers,
+        togglers,
         student,
         films,
         people,

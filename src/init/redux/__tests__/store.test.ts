@@ -7,6 +7,7 @@ import { createStore, combineReducers } from 'redux';
 
 // // // Reducers
 import films  from '../../../bus/films/slice';
+import togglers  from '../../../bus/client/togglers';
 import  people  from '../../../bus/people/slice';
 import  { studentReducer as student }  from '../../../bus/student/reducer';
 
@@ -15,6 +16,7 @@ import { store } from '../index';
 
 
 export const referenceRootReducer = combineReducers({
+    togglers,
     student,
     films,
     people,
