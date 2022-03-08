@@ -14,7 +14,7 @@
         "analyze": "webpack-bundle-analyzer \"./build/stats.json\"",
         "serve": "serve \"./build\" -s",
         "clean": "rm -rf node_modules",
-        "test": "jest",
+        "test": "jest --coverage",
         "test:watch": "npm test -- --watch"
     },
     "dependencies": {
