@@ -4,14 +4,14 @@ import { Route, Routes } from 'react-router-dom';
 
 // Components
 import { Accordion } from '../components/Accordion';
-import { Signup } from '../components/StudentComponents/Signup';
-import { ProfileComponent } from '../components/StudentComponents/ProfileComponent';
+import { Signup } from '../pages/Signup';
+import { ProfileComponent } from '../components/ProfileComponent';
 
 // Pages
 import { Main } from '../pages';
 import ListLessonsReact from '../pages/ListLessonsReact';
 import News from '../pages/News';
-import StudentRegistration from '../pages/StudentRegistration';
+import StudentRegistration from '../pages/Lesson 5';
 import { ReactLesson3 } from '../pages/ReactPractice/ReactLesson3';
 import { ReactLesson4 } from '../pages/ReactPractice/ReactLesson4';
 import NoMatch from '../pages/NoMatch';

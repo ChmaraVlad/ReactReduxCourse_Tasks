@@ -1,5 +1,5 @@
 // Core
-import React from 'react';
+import React, { FC } from 'react';
 import {  useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -7,14 +7,14 @@ import { yupResolver } from '@hookform/resolvers/yup';
 // import {} from '../../../bus/'
 
 // Hooks
-import { useStudent } from '../../../../bus/student/index';
+import { useStudent } from '../../../bus/student/index';
 
 // Styles
 import * as S from './styles';
 import { validationSchema } from './validationSchema';
 import { initialValues } from './initialValues';
 
-export const StudentRegistrationComponent = () => {
+const StudentRegistrationComponent: FC = () => {
     const { register,
         handleSubmit,
         formState: { errors },
@@ -32,7 +32,6 @@ export const StudentRegistrationComponent = () => {
     const onSubmit = (data: any) => {
         applyStudent(data);
         reset();
-        //  как сборосить форму
     };
 
 
@@ -106,8 +105,13 @@ export const StudentRegistrationComponent = () => {
                         />
                     </label>
                 </div>
-                <input type = 'submit' />
+                <button >
+                    Submit
+                </button>
             </S.Form>
         </S.Container>
     );
 };
+
+
+export default StudentRegistrationComponent;

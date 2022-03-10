@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Navigation } from '../../Navigation';
-import { StudentRegistrationComponent } from './StudentRegistrationComponent';
+import { Navigation } from '../../components/Navigation';
+import StudentRegistrationComponent from '../../components/StudentComponents/StudentRegistrationComponent';
 
 // Components
 

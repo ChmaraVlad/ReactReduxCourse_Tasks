@@ -1,7 +1,7 @@
 // Core
 import React from 'react';
-import { useSelector } from '../../../../tools/hooks';
-import { Navigation } from '../../Navigation';
+import { useSelector } from '../../../tools/hooks';
+import { Navigation } from '../Navigation';
 
 
 // Styles
